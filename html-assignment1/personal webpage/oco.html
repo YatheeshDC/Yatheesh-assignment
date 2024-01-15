@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+
+        }
+        form {
+            max-width: 400px;
+            margin-top: 50px;
+            color: snow;
+    
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+            align-content: center;
+        }
+        button {
+            padding: 10px;
+            background-color:greenyellow;
+            color: blueviolet;
+            border: none;
+            cursor: pointer;
+        }
+
+        .head-bar1{
+         background-color:greenyellow;
+         padding: 1%;
+         word-spacing: 100px;
+        }
+
+        #head-bar2{
+         word-spacing: 80px;
+         padding:0px;
+         }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="head-bar1">
+        <a href="ohome.html"> <img src="D:\Downloads\home.png" width="50" height="50"></a>
+        <a href="abtme.html"  target="_blank"> <img src="D:\Downloads\man.png" width="50" height="45"></a>
+        <a href="skills.html"  target="_blank"> <img src="D:\Downloads\skill.png" width="50" height="50"></a>
+        <a href="porto.html"  target="_blank"> <img src="D:\Downloads\study.png" width="50" height="50"></a>
+        <a href="oco.html"> <img src="D:\Downloads\cantact.png" width="50" height="50"></a><br>
+    
+         <span id="head-bar2"><bold> HOME</bold>
+            <bold>ABOUT-ME</bold>
+            <bold>SKILLS </bold>
+            <bold>PORTFOLIO</bold>
+            <bold>CONTACT </bold></span>
+        </div>
+    </center>
+<div>
+    <center>
+    <h3 style="color:snow;">Do You want to Contact me?</h3>
+    <form action="process_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</center>
+</div>
+</body>
+</html>

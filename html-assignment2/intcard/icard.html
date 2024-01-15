@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>icard</title>
+</head>
+  <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-description {
+  font-size: 16px;
+  text-align: justify;
+}
+</style>
+</head>
+<body>
+
+<div class="card-grid">
+  <div class="card">
+    <img src="jalenski.jpeg" alt="Card 1" class="card-image">
+    <h2 class="card-title">Volodymyr Zelenskyy</h2>
+    <p class="card-description">Volodymyr Oleksandrovych Zelenskyy(born 25 January 1978) is a Ukrainian politician 
+      who has been serving as the sixth president of Ukraine since 2019. He was formerly a comedian and actor.</p>
+  </div>
+  <div class="card">
+    <img src="putin.jpeg" alt="Card 2" class="card-image">
+    <h2 class="card-title">Vladimir Putin</h2>
+    <p class="card-description">Vladimir Vladimirovich Putin (born 7 October 1952) is a Russian politician and former 
+      intelligence officer who is the President of Russia. Putin has held continuous positions as president or prime 
+      minister since 1999 as prime minister from 1999 to 2000 and from 2008 to 2012, and as president from 2000 to 2008 
+      and since 2012.He is the longest-serving Russian or Soviet leader since Joseph Stalin.</p>
+  </div>
+  <div class="card">
+    <img src="biden.jpeg" alt="Card 3" class="card-image">
+    <h2 class="card-title">Joe Biden</h2>
+    <p class="card-description">Joseph Robinette Biden Jr.(born November 20, 1942) is an American politician who is 
+      the 46th and current president of the United States. A member of the Democratic Party, he previously served 
+      as the 47th vice president from 2009 to 2017 under President Barack Obama and represented Delaware in the 
+      United States Senate from 1973 to 2009.</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Responsive Navigation Bar</title>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: goldenrod;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <ul class="nav-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h1>Lorem, ipsum dolor </h1>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quia neque atque sunt harum obcaecati quae quo 
+    totam, molestiae nihil consequuntur ut cum minus cumque, ad veritatis exercitationem reprehenderit animi 
+    sapiente numquam sit officiis voluptas id iusto. Neque nobis ipsa nesciunt, quos maxime animi omnis. 
+    Expedita nostrum omnis iure, aliquid rerum dolore, sit molestias adipisci debitis quos veritatis beatae? 
+    Iusto excepturi earum reprehenderit a sit sint cum odit corporis odio minus officia numquam architecto 
+    temporibus modi dolores esse, aperiam et eos eum magni nemo error nostrum praesentium quidem! Aspernatur hic 
+    voluptatibus totam, impedit iste nemo quisquam, sunt ex eligendi repudiandae eveniet asperiores explicabo quis,
+     est molestiae et deserunt recusandae dicta quibusdam. Aliquid sapiente corrupti dolores sunt commodi. 
+     Ea recusandae pariatur similique omnis quasi. Veritatis, sapiente. Saepe veniam perspiciatis optio cumque 
+     illum quis, hic assumenda? Saepe eum ut sed nam omnis similique dignissimos laborum quo sunt veritatis, 
+     assumenda ad architecto natus corporis ab soluta neque ex obcaecati corrupti! Asperiores provident quasi 
+     fuga iure optio aspernatur qui nihil sit. Voluptatem repellat libero beatae sunt a. Distinctio, deserunt 
+     optio accusamus impedit placeat commodi consectetur architecto cumque laudantium explicabo perspiciatis 
+     expedita nihil eos maiores ea tempore repellendus odit quisquam rerum? Eveniet ipsam adipisci inventore?
+  </p>
+</body>
+</html>

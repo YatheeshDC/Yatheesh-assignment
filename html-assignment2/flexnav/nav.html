@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+    <style>
+        @media screen and (max-width:100vw)and (min-width:99vw){
+       
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav{
+            background-color: grey;
+            height: 100px;
+            
+        }
+        .nav-logo{
+            font-size: 1.0em;
+            
+            
+            
+        }
+        
+        .nav-lists{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            color: #fff;
+            
+        }
+       
+        .nav-lists a{
+        
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.5em;
+            background-color: lightgray;
+            border-radius: 5px ;
+            color: black;   
+                        
+        }
+        .nav-lists a:hover{
+            background-color: lightslategrey;
+            border: 1px solid lightslategray;
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <div class   ="nav-logo">
+        <a href=""><img  src="micrologo.png" width="60px"></a>
+        </div>
+        <span class="nav-lists">
+        
+        <a href="">HOME</a>
+        <a href="">ABOUT</a>
+        <a href="">CONTACT </a>
+        <a href="">SERVICES</a>
+        <a href="">BLOG</a>
+        
+    </span> 
+    </nav>
+    
+</body>
+</html>
