@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Board</title>
+<script src="https://kit.fontawesome.com/7d2f3b39e5.js" crossorigin="anonymous"></script>
+<style>
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+  }
+
+  .square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+
+  .black {
+    background-color:black;
+  }
+
+  .white {
+    background-color: #eeeed2;
+  }
+</style>
+</head>
+<body>
+
+<div class="board" id="board"></div>
+<i class="fa-solid fa-chess-pawn" id="pawn" onclick="click1()"></i>
+
+
+ <script>
+  let board = document.getElementById('board');
+  
+
+  for (let row = 0; row < 8; row++) {
+    for (let col = 0; col < 8; col++) {
+       square = document.createElement('div');
+      square.classList.add('square');
+      if ((row + col) % 2 === 0) {
+        square.classList.add('white');
+      } else {
+        square.classList.add('black');
+      }
+      board.appendChild(square);
+    }
+  } 
+</script> 
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .board {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            height: 400px;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .black {
+            background-color:white;
+        }
+        .white {
+            background-color:lightgreen;
+        }
+        .piece {
+            color: black; 
+        }
+    </style>
+</head>
+<body>
+    <div class="board" id="board"></div>
+    <script>
+        let board = document.getElementById('board')
+        let selectedPiece = null;
+
+        function createPiece(icon, color) {
+            let piece = document.createElement('i');
+            piece.classList.add('piece', 'fas', icon);
+            if (color === 'white') {
+                piece.style.color = 'white';
+            }
+            return piece;
+          }
+        function movePiece(square) {
+            if (!selectedPiece) return;
+            square.appendChild(selectedPiece);
+            selectedPiece = null;
+        }
+
+        function handleSquareClick(event) {
+            let square = event.currentTarget;
+            if (selectedPiece && square !== selectedPiece.parentElement) {
+                movePiece(square);
+            } else if (square.children.length > 0 && square.children[0].classList.contains('piece')) {
+                selectedPiece = square.children[0];
+            }
+        }
+
+        for (let row = 0; row < 8; row++) {
+            for (let col = 0; col < 8; col++) {
+                let square = document.createElement('div');
+                square.classList.add('square');
+                if ((row + col) % 2 === 0) {
+                    square.classList.add('white');
+                } else {
+                    square.classList.add('black');
+                }
+                square.addEventListener('click', handleSquareClick);
+                board.appendChild(square);
+            }
+        }
+
+        for (let i = 0; i < 8; i++) {
+            let pawnWhite = createPiece('fa-chess-pawn', 'white');
+            let pawnBlack = createPiece('fa-chess-pawn', 'black');
+            board.children[1 * 8 + i].appendChild(pawnWhite); 
+            board.children[6 * 8 + i].appendChild(pawnBlack); 
+        }
+    </script>
+</body>
+</html>
